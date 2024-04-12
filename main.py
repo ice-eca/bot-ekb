@@ -14,6 +14,7 @@ request_chat_id = '-1002088344075'
 
 @bot.message_handler(commands=['start'])
 
+
 def enter_district(message):
     clear_data(message)
     data[message.chat.id] = {'stage':0}
