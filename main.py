@@ -25,13 +25,14 @@ def enter_district(message):
     
     markup.add(itembtn1, itembtn2, itembtn3, itembtn4)
     bot.send_photo(message.chat.id, open('kiber1.png', 'rb'))
-    bot.send_message(message.chat.id, 'Школа программирования для детей KIBERone Екатеринбург приветствует вас!\U0001F60A\n \nДля летних КИБЕРканикул мы подготовили для Вас 6 уникальных модулей, которые разработали на основе самых актуальных и трендовых тенденций IT-образования\U0001F4BB\n \n\U00002705Minecraft и таинственный портал (8+);\n \n\U00002705Создай свою карту в Roblox Studio (8+);\n \n\U00002705Новый Марио на Construct (8+);\n \n\U00002705Магия нейросетей. Курс искусственного интеллекта в помощь ребенку (8+);\n \n\U00002705Делаем супер-сайты со спецэффектами. Анимация в Figma (11+);\n \n\U00002705Создание интерактивной игры с собственном персонажем на конструкторе ClickTeam Fusion (11+).\n \nВыберите удобный для Вас район\U0001F447' , reply_markup=markup)
+    bot.send_message(message.chat.id, 'Школа программирования для детей KIBERone Екатеринбург приветствует вас!\U0001F60A\n \nНа этой неделе мы проводим бесплатный мастер-класс по программированию для детей 6-14 лет\U0001F4BB\n \n\U00002705Ваш ребенок создаст свой первый мультфильм и запрограммирует своего героя в игре Майнкрафт\n \n\U00002705Расскажем, как избавить ребенка от игромании и научить компьютерной грамотности, чтобы подготовить к успешному будущему \n \n\U00002705Длительность занятия 60 минут. Все необходимое предоставим. Ничего брать с собой не нужно. \n \nВыберите удобный для Вас район\U0001F447' , reply_markup=markup)
     
 def enter_age(message):
     markup = types.InlineKeyboardMarkup()
-    itembtn1 = types.InlineKeyboardButton(text='8-10 лет', callback_data='8-10')
-    itembtn2 = types.InlineKeyboardButton(text='11-14 лет', callback_data='11-14')
-    markup.add(itembtn1, itembtn2)
+    itembtn1 = types.InlineKeyboardButton(text='6-8 лет', callback_data='6-8')
+    itembtn2 = types.InlineKeyboardButton(text='9-11 лет', callback_data='9-11')
+    itembtn3 = types.InlineKeyboardButton(text='12-14 лет', callback_data='12-14') 
+    markup.add(itembtn1, itembtn2, itembtn3)
     bot.send_message(message.chat.id, 'Пожалуйста, укажите возраст вашего ребенка\U0001F447',reply_markup=markup)
 
 
