@@ -21,8 +21,8 @@ def enter_district(message):
     itembtn1 = types.InlineKeyboardButton(text='Центр', callback_data='Центр')
     itembtn2 = types.InlineKeyboardButton(text='ВИЗ', callback_data='ВИЗ')
     itembtn3 = types.InlineKeyboardButton(text='Ботаника', callback_data='Ботаника')
-    itembtn4 = types.InlineKeyboardButton(text='Академический', callback_data='Академический')
-    itembtn5 = types.InlineKeyboardButton(text='Верхняя Пышма', callback_data='Верхняя Пышма')
+    itembtn4 = types.InlineKeyboardButton(text='Академ', callback_data='Академ')
+    itembtn5 = types.InlineKeyboardButton(text='В Пышма', callback_data='В Пышма')
     itembtn6 = types.InlineKeyboardButton(text='Клевер Парк', callback_data='Клевер Парк')
     
     markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5, itembtn6)
