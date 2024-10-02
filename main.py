@@ -24,8 +24,9 @@ def enter_district(message):
     itembtn4 = types.InlineKeyboardButton(text='Академ', callback_data='Академ')
     itembtn5 = types.InlineKeyboardButton(text='В Пышма', callback_data='В Пышма')
     itembtn6 = types.InlineKeyboardButton(text='Клевер Парк', callback_data='Клевер Парк')
+    itembtn7 = types.InlineKeyboardButton(text='Автовокзал', callback_data='Автовокзал')
     
-    markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5, itembtn6)
+    markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5, itembtn6, itembtn7)
     bot.send_photo(message.chat.id, open('kiber1.png', 'rb'))
     bot.send_message(message.chat.id, 'Школа программирования для детей KIBERone Екатеринбург приветствует вас!\U0001F60A\n \nНа этой неделе мы проводим бесплатный мастер-класс по программированию для детей 6-14 лет\U0001F4BB\n \n\U00002705Ваш ребенок создаст свой первый мультфильм и запрограммирует своего героя в игре Майнкрафт\n \n\U00002705Расскажем, как избавить ребенка от игромании и научить компьютерной грамотности, чтобы подготовить к успешному будущему \n \n\U00002705Длительность занятия 60 минут. Все необходимое предоставим. Ничего брать с собой не нужно. \n \nВыберите удобный для Вас район\U0001F447' , reply_markup=markup)
     
