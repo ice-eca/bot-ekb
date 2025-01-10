@@ -22,13 +22,15 @@ def enter_district(message):
     itembtn2 = types.InlineKeyboardButton(text='ВИЗ', callback_data='ВИЗ')
     itembtn3 = types.InlineKeyboardButton(text='Ботаника', callback_data='Ботаника')
     itembtn4 = types.InlineKeyboardButton(text='Академ', callback_data='Академ')
-    itembtn5 = types.InlineKeyboardButton(text='В Пышма', callback_data='В Пышма')
+    itembtn5 = types.InlineKeyboardButton(text='Пышма', callback_data='Пышма')
     itembtn6 = types.InlineKeyboardButton(text='Клевер Парк', callback_data='Клевер Парк')
     itembtn7 = types.InlineKeyboardButton(text='Автовокзал', callback_data='Автовокзал')
+    itembtn7 = types.InlineKeyboardButton(text='ЖБИ', callback_data='ЖБИ')
+    itembtn7 = types.InlineKeyboardButton(text='Уралмаш', callback_data='Уралмаш')
     
     markup.add(itembtn1, itembtn2, itembtn3, itembtn4, itembtn5, itembtn6, itembtn7)
     bot.send_photo(message.chat.id, open('kiber1.png', 'rb'))
-    bot.send_message(message.chat.id, 'Школа программирования для детей KIBERone Екатеринбург приветствует вас!\U0001F60A\n \nНа этой неделе мы проводим бесплатный мастер-класс по программированию для детей 6-14 лет.\n \n\U00002705Ваш ребенок создаст свой первый мультфильм и запрограммирует своего героя в игре Майнкрафт \n \n\U00002705Расскажем, как избавить ребенка от игромании и научить компьютерной грамотности, чтобы подготовить к успешному будущему\n \n\U00002705Длительность занятия 60 минут. Все необходимое предоставим. Ничего брать с собой не нужно.\n \nВыберите удобный для Вас район\U0001F447' , reply_markup=markup)
+    bot.send_message(message.chat.id, 'Школа программирования для детей KIBERone Екатеринбург приветствует вас!\U0001F60A\n \nНа этой неделе мы проводим бесплатный мастер-класс по программированию для детей 6-14 лет.\n \n\U00002705Ваш ребенок создаст свой первый мультфильм и запрограммирует своего героя в игре Майнкрафт.\n \n\U00002705Расскажем, как избавить ребенка от игромании и научить компьютерной грамотности, чтобы подготовить к успешному будущему.\n \n\U00002705Длительность занятия 60 минут. Все необходимое предоставим. Ничего брать с собой не нужно.\n \nВыберите удобный для Вас район\U0001F447' , reply_markup=markup)
     
 def enter_age(message):
     markup = types.InlineKeyboardMarkup()
@@ -63,7 +65,7 @@ def handle_text(message):
 
 def check_and_send(message):
     if district_regex.match(data[message.chat.id]['district']) and age_regex.match(data[message.chat.id]['age']):
-        bot.send_message(message.chat.id, 'Спасибо! Скоро с Вами свяжется наш менеджер и подберёт подходящую смену для Вашего ребёнка. \n \nДо встречи на летних КИБЕРканикулах!\U0001F60A')
+        bot.send_message(message.chat.id, 'Спасибо! Скоро с Вами свяжется наш менеджер и отправит вам расписание пробных занятий на ближайшую неделю и согласует точное время.\n \nДо встречи на уроке!\U0001F60A')
         bot.send_message(request_chat_id, '\U00002757\U00002757\U00002757 Новый лид\U00002757\U00002757\U00002757'+'\nРайон: ' + data[message.chat.id]['district']+'\nВозраст: '+data[message.chat.id]['age']+'\nТел: '+data[message.chat.id]['phone_number'])
         clear_data(message)
     else:
